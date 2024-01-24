@@ -15,7 +15,7 @@ class PostController extends Controller
 
     public function index(User $user)
     {
-        dd($user);
+        dd($user); 
         return view('dashboard');
     }
 }
