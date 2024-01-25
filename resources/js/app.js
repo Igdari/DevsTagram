@@ -14,7 +14,6 @@ const dropzone = new Dropzone('#dropzone',{
 //Eventos
 dropzone.on('sending', function (file, xhr, formData) {
     console.log(formData);
-
 })
 
 dropzone.on('success', function (file, response){

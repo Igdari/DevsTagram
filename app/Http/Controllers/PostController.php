@@ -20,8 +20,10 @@ class PostController extends Controller
         ]);
     }
 
-    public function create()
+    public function create(User $user)
     {
-        return view('posts.create');
+        return view('posts.create',[
+            'user'=> $user
+        ]);
     }
 }

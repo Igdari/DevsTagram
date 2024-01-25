@@ -17,7 +17,7 @@ class RegisterController extends Controller
 
     public function store(Request $request) 
     {
-        // Modificar el request
+        // Modificar el request del username para quitar espacios y caracteres especiales como tildes
         $request->request->add(['username' => Str::slug($request->username)]);
 
         // Validacion
@@ -28,7 +28,7 @@ class RegisterController extends Controller
             'password' => 'required|confirmed|min:6',
         ]);
 
-        // Insert del usuario
+        // // Insert del usuario
         User::create([
             'name' => $request->name,
             'username' => $request->username,
@@ -41,11 +41,11 @@ class RegisterController extends Controller
         //     'email'=>$request->email,
         //     'password'=>$request->password
         // ]);
-
+        
         //Otra forma de autenticar
         auth()->attempt($request->only('email','password'));
 
         //Redireccionar al usuario
-        return redirect()->route('post.index');
+        return redirect()->route('posts.index', auth()->user()->username);
     }
 }
