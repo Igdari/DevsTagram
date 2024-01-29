@@ -26,4 +26,14 @@ class PostController extends Controller
             'user'=> $user
         ]);
     }
+
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'titulo' => 'required|max:255',
+            'descripcion' => 'required|max:255',
+            'imagen' => 'required'
+        ]);
+    }
 }

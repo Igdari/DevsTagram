@@ -20,6 +20,6 @@ class ImagenController extends Controller
         $imagenPath = public_path('uploads') . "/" . $nombreImagen;//Nombre y ubicacion donde se guardara
         $imagenServidor->save($imagenPath);
 
-        return response()->json(['image' => $nombreImagen]);
+        return response()->json(['imagen' => $nombreImagen]);
     }
 }
