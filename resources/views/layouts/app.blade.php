@@ -63,7 +63,7 @@
         </main>
 
         <footer class="mt-10 text-center p-5 text-gray-600 font-bold uppercase">
-            DevStagra - Todos los derechos Reservados
+            DevStagram - Todos los derechos Reservados
             {{ now()->year }}
         </footer>
     </body>
