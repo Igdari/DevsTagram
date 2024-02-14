@@ -36,10 +36,7 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 //rutas para el perfil
 Route::get('/editar-perfil', [PerfilController::class, 'index'])->name('perfil.index');
-// Route::get('/editar-password', [PerfilController::class, 'index'])->name('perfil.password.index');
 Route::post('/editar-perfil', [PerfilController::class, 'store'])->name('perfil.store');
-// Route::post('/editar-password', [PerfilController::class, 'store'])->name('perfil.password.store');
-
 Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.store');
 
 
